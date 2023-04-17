@@ -121,7 +121,8 @@
                 android:layout_height="wrap_content"
                 android:stepSize="1"
                 android:valueFrom="120"
-                android:valueTo="200" />
+                android:valueTo="200"
+                android:contentDescription="@string/height"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -176,7 +177,8 @@
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/ic_subtract"
                     app:backgroundTint="@color/background_fab"
-                    app:tint="@color/white" />
+                    app:tint="@color/white"
+                    android:contentDescription="@string/weight"/>
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnPlusWeight"
@@ -184,7 +186,8 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_plus"
                     app:backgroundTint="@color/background_fab"
-                    app:tint="@color/white" />
+                    app:tint="@color/white"
+                    android:contentDescription="@string/weight"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -239,7 +242,8 @@
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/ic_subtract"
                     app:backgroundTint="@color/background_fab"
-                    app:tint="@color/white" />
+                    app:tint="@color/white"
+                    android:contentDescription="@string/age"/>
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnPlusAge"
@@ -247,7 +251,8 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_plus"
                     app:backgroundTint="@color/background_fab"
-                    app:tint="@color/white" />
+                    app:tint="@color/white"
+                    android:contentDescription="@string/age"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
