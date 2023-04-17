@@ -1,5 +1,6 @@
 package com.example.bmi_calculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -30,6 +31,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnPlusAge: FloatingActionButton
     private lateinit var tvAge: TextView
     private lateinit var btnCalculate: Button
+
+    companion object{
+        const val IMC_KEY = "IMC_RESULT"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -84,11 +89,18 @@ class MainActivity : AppCompatActivity() {
             setAge()
         }
         btnCalculate.setOnClickListener {
-           calculateIMC()
+           val result = calculateIMC()
+            navigateToResult(result)
         }
     }
 
-    private fun calculateIMC(): Any {
+    private fun navigateToResult(result: Double) {
+        val intent = Intent(this,ResultActivity::class.java)
+        intent.putExtra(IMC_KEY,result)
+        startActivity(intent)
+    }
+
+    private fun calculateIMC(): Double {
         val df = DecimalFormat("#.##")
         val imc = currentWeight / (currentHeight.toDouble() /100 * currentHeight.toDouble()/100)
         return df.format(imc).toDouble()
