@@ -57,7 +57,6 @@ class ResultActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun initComponents() {
         tvIMC = findViewById(R.id.tvIMC)
         tvResult = findViewById(R.id.tvResult)
